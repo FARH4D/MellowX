@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
- 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h1 id="modalTitle">I'm sorry to hear that :(</h1>
-    </div>
-  
-  </div> 
 
 <head>
     
@@ -26,6 +16,9 @@
     </script>
 
 
+
+
+
 </head>
 
 <body>
@@ -38,8 +31,8 @@
 
     <div class = "subtop">
 
-        <a href=""><div class="buttons" >Home</div></a>
-        <a href=""><div class="buttons">Statistics</div></a>
+        <a href=""><div class="buttons">Home</div></a>
+        <a href=""><div class="buttons">Health</div></a>
         <a href=""><div class="buttons">Help</div></a>
         <a href=""><div class="buttons">Account</div></a>
 
@@ -55,17 +48,93 @@
     
     
     <div id ="wrapper">
-      <img src="images/sad.png" id = "myBtn" class="faces">
-      <img src="images/neutral.png" class="faces">
-      <img src="images/happy.png" class="faces">
+
+      <div id="sadFace" onclick="sadChange()" class = "faces">
+      <img src="images/sad.png" id = "sadButton" class="faces">
+      </div>
+
+      <div id="neutralFace" onclick="neutralChange()" class = "faces">
+      <img src="images/neutral.png" id ="neutralButton" class="faces">
+      </div>
+
+      <div id="happyFace" onclick="happyChange()" class = "faces">
+      <img src="images/happy.png" id = "happyButton" class="faces">
+      </div>
+
+    </div>
+
+
+    
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    
+    
+    <h1 id="modalTitle"></h1>
+
+    <p id="modalParagraph"></p>
+
+    <p class = "modalOptions" id="modalOption1"></p>
+    <p class = "modalOptions" id="modalOption2"></p>
+    <p class = "modalOptions" id="modalOption3"></p>
+    <p class = "modalOptions" id="modalOption4"></p>
+    <p class = "modalOptions" id="modalOption5"></p>
+  </div>
+
+
+  <script type="text/javascript">
+
+    function sadChange(){
+      document.getElementById("modalTitle").innerHTML = "I'm sorry to hear that :(";
+      document.getElementById("modalParagraph").innerHTML = "Tell me more, whats wrong?";
+
+      document.getElementById("modalOption1").innerHTML = "I don't know"
+      document.getElementById("modalOption2").innerHTML = "Tired/Lack of energy"
+      document.getElementById("modalOption3").innerHTML = "Grief"
+      document.getElementById("modalOption4").innerHTML = "Stress"
+      document.getElementById("modalOption5").innerHTML = "Other"
+    }
+    
+    function neutralChange(){
+      document.getElementById("modalTitle").innerHTML = "That's okay, let's try doing something today :)";
+    }
+
+    function happyChange(){
+      document.getElementById("modalTitle").innerHTML = "I'm glad you're feeling good :D";
+    }
+
+  </script>
+  
+
+
+
+</div> 
+
+
+
+
+    <div class ="stats">
+
+      <h1 class ="statTitle">
+        Statistics
+      </h1>
+
+      <body onload="setInterval(refresh, 500);">
+        <span id="content">Waiting for MellowX...</span></br>
+        <span id="randomNum">Waiting for MellowX..</span>
+    
+    </body>
+
     </div>
 
 
 
-
-
-
-
+    <br>
 
 
 
@@ -77,17 +146,26 @@
 
 
     <script>
-        // Get the modal
+
         var modal = document.getElementById("myModal");
         
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
+
+        var sadBtn = document.getElementById("sadButton");
+        var neutralBtn = document.getElementById("neutralButton");
+        var happyBtn = document.getElementById("happyButton");
+
+
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
         
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
+        sadBtn.onclick = function() {
+          modal.style.display = "block";
+        }
+        neutralBtn.onclick = function() {
+          modal.style.display = "block";
+        }
+        happyBtn.onclick = function() {
           modal.style.display = "block";
         }
         
