@@ -1,7 +1,12 @@
 <?php
 
 $dbhost = "localhost";
-$dbuser = "localhost";
-$dbpass = "localhost";
-$dbname = "localhost";
-$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "login_db";
+
+if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname));
+{
+
+	die("failed to connect!")
+}
