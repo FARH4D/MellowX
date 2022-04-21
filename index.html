@@ -79,11 +79,11 @@
 
     <p id="modalParagraph"></p>
 
-    <p class = "modalOptions" id="modalOption1"></p>
-    <p class = "modalOptions" id="modalOption2"></p>
-    <p class = "modalOptions" id="modalOption3"></p>
-    <p class = "modalOptions" id="modalOption4"></p>
-    <p class = "modalOptions" id="modalOption5"></p>
+    <a href="index1" id = "modalLink1"><p class = "modalOptions" id="modalOption1"></p></a>
+    <a href="index2" id = "modalLink2"><p class = "modalOptions" id="modalOption2"></p></a>
+    <a href="index3" id = "modalLink3"><p class = "modalOptions" id="modalOption3"></p></a>
+    <a href="index4" id = "modalLink4"><p class = "modalOptions" id="modalOption4"></p></a>
+    <a href="index5" id = "modalLink5"><p class = "modalOptions" id="modalOption5"></p></a>
   </div>
 
 
@@ -96,16 +96,49 @@
       document.getElementById("modalOption1").innerHTML = "I don't know"
       document.getElementById("modalOption2").innerHTML = "Tired/Lack of energy"
       document.getElementById("modalOption3").innerHTML = "Grief"
-      document.getElementById("modalOption4").innerHTML = "Stress"
+      document.getElementById("modalOption4").innerHTML = "Stress/Anxiety"
       document.getElementById("modalOption5").innerHTML = "Other"
+
+      document.getElementById("modalLink1").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink2").setAttribute('href', 'tired.html');
+      document.getElementById("modalLink3").setAttribute('href', 'grief.html');
+      document.getElementById("modalLink4").setAttribute('href', 'stress.html');
+      document.getElementById("modalLink5").setAttribute('href', 'idk.html');
+
     }
     
     function neutralChange(){
       document.getElementById("modalTitle").innerHTML = "That's okay, let's try doing something today :)";
+      document.getElementById("modalParagraph").innerHTML = "Here are some ideas for now, how about you try one?";
+
+      document.getElementById("modalOption1").innerHTML = "Workout"
+      document.getElementById("modalOption2").innerHTML = "Meditation"
+      document.getElementById("modalOption3").innerHTML = "Go outside for a walk"
+      document.getElementById("modalOption4").innerHTML = "Help others"
+      document.getElementById("modalOption5").innerHTML = "Spend time with friends/Family"
+
+      document.getElementById("modalLink1").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink2").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink3").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink4").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink5").setAttribute('href', 'idk.html');
+
     }
 
     function happyChange(){
       document.getElementById("modalTitle").innerHTML = "I'm glad you're feeling good :D";
+      document.getElementById("modalParagraph").innerHTML = "What has you in such a good mood?";
+      document.getElementById("modalOption1").innerHTML = "Fun activity"
+      document.getElementById("modalOption2").innerHTML = "Just in a good mood"
+      document.getElementById("modalOption3").innerHTML = "Family/Affection"
+      document.getElementById("modalOption4").innerHTML = "Exercise"
+      document.getElementById("modalOption5").innerHTML = "Other"
+      
+      document.getElementById("modalLink1").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink2").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink3").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink4").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink5").setAttribute('href', 'idk.html');
     }
 
   </script>
