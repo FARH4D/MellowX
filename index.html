@@ -12,10 +12,17 @@
         function refresh() {
             $('#content').load('/arduino/temperature1');
             $('#randomNum').load('/arduino/ranNum1');
+            billybob.load('/arduino/temperature1');
 	  	}
     </script>
 
-
+    <script type="text/javascript">
+      function hngng() {
+        if (document.getElementById("content") > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
+        if (document.getElementById(billybob) > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
+        if (document.getElementById("billybob") > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
+    }
+    </script>
 
 
 
@@ -32,7 +39,7 @@
     <div class = "subtop">
 
         <a href="index.html"><div class="buttons">Home</div></a>
-        <a href=""><div class="buttons">Health</div></a>
+        <a href="health.html"><div class="buttons">Health</div></a>
         <a href="help.html"><div class="buttons">Help</div></a>
         <a href="account.html"><div class="buttons">Account</div></a>
 
@@ -161,8 +168,10 @@
         <span id="content">Waiting for MellowX...</span></br>
         <span id="randomNum">Waiting for MellowX..</span>
     
-    </body>
 
+
+    </body>
+    
     </div>
 
     <br><br><br><br>
@@ -187,13 +196,18 @@
 
     
 
+    <body onload="setInterval(hngng, 500);">
+      <p>haha</p>
+    </body>
 
 
 
 
-
-
-
+    <script>
+      
+        
+      
+    </script>
 
 
     <script>
@@ -234,6 +248,9 @@
         </script>
 
 
+
+    
+   
 
 
 </body>
