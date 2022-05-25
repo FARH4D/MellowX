@@ -3,20 +3,18 @@
 
 
 <head>
-    
     <link rel="stylesheet" href="styles2.css">
 	<script type="text/javascript" src="zepto.min.js"></script>
     
 
     <script type="text/javascript">
         function refresh() {
-            $('#humidityDisplay').load('/arduino/humidity');
-            $('#tempDisplay').load('/arduino/temperature');
-            $('#bpmDisplay').load('/arduino/heartRate');
+            $('#content').load('/arduino/temperature');
+            $('#randomNum').load('/arduino/ranNum1');
 	  	}
     </script>
 
-    
+
 
 
 
@@ -25,46 +23,56 @@
 <body>
 
     <header class = "top">
-        <img src="images/logo.png" id = "logo" alt="Mellow X">
-        <strong> Let go and flow...</strong>
+        <a href="index.html"><img src="images/logo.png" id = "logo" alt="Mellow X"></a>
+        <strong> SLOGAN HERE</strong>
         
     </header>
 
     <div class = "subtop">
 
         <a href="index.html"><div class="buttons">Home</div></a>
-        <a href="health.html"><div class="buttons">Health</div></a>
-        <a href="help.html"><div class="buttons">Help</div></a>
-        <a href="account.html"><div class="buttons">Account</div></a>
+        <a href=""><div class="buttons">Health</div></a>
+        <a href=""><div class="buttons">Help</div></a>
+        <a href=""><div class="buttons">Account</div></a>
 
     </div>
-    
-    
 
-    <h1 id = "title">The Mellow X</h1>
-    
-    <p id ="idkPara1">Here at team Bingus we aim to make a positive impact when it comes to mental health 
-        and anxiety, while we obviously accept that it is a hard task for a small team like ours, we hope 
-        to slowly shorten the gap and make the best impact possible :) </br></br>
-        The Mellow X isn't a device that magically cures your anxiety and mental health, but it is a device 
-        that slowly helps YOU to better yourself and identify the causes of your struggles.</br> </br>
 
-        What you are viewing today is just a prototype and can change massively with more development time
-        and a higher budget.</br> </br>
+    <h1 id = "title">Helping others</h1>
 
+    <p id ="idkPara1">
+       Helping others is one of the most rewarding things someone can do not only are you bringing a positive
+       impact to soemones life but you are also gaining a sense of self appreicattion and value by doing this 
+       as you truly begin to realise the importance and impact you have on others. In a world where everyhting
+       appears to run smoothly without people always helping others it is increasingly important to see just how 
+       wrong that is and how much value and importance you bring to others.
     </p>
 
-    <h1 id = "title">How does the Mellow X work?</h1>
-
-    <p id ="idkPara1">The Mellow X hosts this website that you can use to state your current problem, 
-        the Mellow X will then offer you possible reasons and solutions for your problem so you can try 
-        to slowly fix them one step at a time. </br></br>
-        Our product also has a heart rate sensor and an air quality sensor, these two modules are used to 
-        further identify any possible causes of your problems (high resting heart rate or high 
-        room humidity). </br></br>
-        If these causes are detected, the Mellow X will warn you before advising and teaching you about 
-        what to do next.</br></br>
 
 
+    <div id = "idkSection" class = "SECTIONS">
 
-    </p>
+        <p id = "idkTitle1">Charity work</p>
+        <p id = "idkPara2" class = "SECTIONS"> Doing charity work is not only helping the less fortunate but also
+            provides a major sense of value as it is extremely rewarding mentally, it is the idea of helping someone 
+            else without any intention of reciving anything that makes it so great. By having a task of importance 
+            it will increase your understanding of your value and importance in the world, ie helping to distribute food
+            to homeless people. If you failed to show up someone may go hungry and this is how you realise the importnace 
+            of you as a person and the endless capabilties to help others you possess.
+
+        </p>
+
+        <p id = "idkTitle2">Helping your friends</p>
+        <p id = "idkPara3" class = "SECTIONS"> Helping anyone is great but helping your friends in particular is an amazing 
+            feeling as you know them on another level to soemone you dont meaning the impact you have on them would be 
+            extremley visible, not sure where to start ? Simply ask them if they need help with anything or want to talk
+            you will likely find they have something they want to get of their chest. <br> <br>
+
+            Helping your friends will also come back to help you as they will remember your help and be there for you in your 
+            times of need that is the beauty of good freindship so one can never underestimate its value as it is more powerful
+            and valuable than many undertand it for.
+
+            
+        </p>
+        
+    </div>
