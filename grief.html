@@ -10,12 +10,13 @@
 
     <script type="text/javascript">
         function refresh() {
-            $('#content').load('/arduino/temperature');
-            $('#randomNum').load('/arduino/ranNum1');
+            $('#humidityDisplay').load('/arduino/humidity');
+            $('#tempDisplay').load('/arduino/temperature');
+            $('#bpmDisplay').load('/arduino/heartRate');
 	  	}
     </script>
 
-
+    
 
 
 
@@ -24,20 +25,20 @@
 <body>
 
     <header class = "top">
-        <a href="index.html"><img src="images/logo.png" id = "logo" alt="Mellow X"></a>
-        <strong> SLOGAN HERE</strong>
+        <img src="images/logo.png" id = "logo" alt="Mellow X">
+        <strong> Let go and flow...</strong>
         
     </header>
 
     <div class = "subtop">
 
         <a href="index.html"><div class="buttons">Home</div></a>
-        <a href=""><div class="buttons">Health</div></a>
-        <a href=""><div class="buttons">Help</div></a>
-        <a href=""><div class="buttons">Account</div></a>
+        <a href="health.html"><div class="buttons">Health</div></a>
+        <a href="help.html"><div class="buttons">Help</div></a>
+        <a href="account.html"><div class="buttons">Account</div></a>
 
     </div>
-
+    
 
     <h1 id = "title">Dealing with grief.</h1>
     

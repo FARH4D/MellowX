@@ -10,19 +10,13 @@
 
     <script type="text/javascript">
         function refresh() {
-            $('#content').load('/arduino/temperature1');
-            $('#randomNum').load('/arduino/ranNum1');
-            billybob.load('/arduino/temperature1');
+            $('#humidityDisplay').load('/arduino/humidity');
+            $('#tempDisplay').load('/arduino/temperature');
+            $('#bpmDisplay').load('/arduino/heartRate');
 	  	}
     </script>
 
-    <script type="text/javascript">
-      function hngng() {
-        if (document.getElementById("content") > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
-        if (document.getElementById(billybob) > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
-        if (document.getElementById("billybob") > 60) document.getElementById("title").innerHTML = "I'm glad you're feeling good :D";
-    }
-    </script>
+    
 
 
 
@@ -32,7 +26,7 @@
 
     <header class = "top">
         <img src="images/logo.png" id = "logo" alt="Mellow X">
-        <strong> SLOGAN HERE</strong>
+        <strong> Let go and flow...</strong>
         
     </header>
 
@@ -141,11 +135,11 @@
       document.getElementById("modalOption4").innerHTML = "Exercise"
       document.getElementById("modalOption5").innerHTML = "Other"
       
-      document.getElementById("modalLink1").setAttribute('href', 'idk.html');
-      document.getElementById("modalLink2").setAttribute('href', 'idk.html');
-      document.getElementById("modalLink3").setAttribute('href', 'idk.html');
-      document.getElementById("modalLink4").setAttribute('href', 'idk.html');
-      document.getElementById("modalLink5").setAttribute('href', 'idk.html');
+      document.getElementById("modalLink1").setAttribute('href', '');
+      document.getElementById("modalLink2").setAttribute('href', '');
+      document.getElementById("modalLink3").setAttribute('href', '');
+      document.getElementById("modalLink4").setAttribute('href', '');
+      document.getElementById("modalLink5").setAttribute('href', '');
     }
 
   </script>
@@ -165,24 +159,45 @@
       </h1>
 
       <body onload="setInterval(refresh, 500);">
-        <span id="content">Waiting for MellowX...</span></br>
-        <span id="randomNum">Waiting for MellowX..</span>
+        <p id ="humidityTitle">Humidity: </p>
+        <span id="humidityDisplay">0</span></br>
+        <p id = "tempTitle">Temperature:</p>
+        <span id="tempDisplay">0</span></br>
+        <p id = "bpmTitle">Heart Rate:</p>
+        <span id="bpmDisplay">0</span>
+
+        <p id = "checkValues" onclick="checkValues()">Check Values</p>
+
+        <script type = "text/javascript">
+          function checkValues(){
+            var humidityValue = parseInt(document.getElementById("humidityDisplay").innerHTML);
+            var tempValue = parseInt(document.getElementById("tempDisplay").innerHTML);
+            var bpmValue = parseInt(document.getElementById("bpmDisplay").innerHTML);
+
+            if (parseInt(document.getElementById("humidityDisplay").innerHTML) >= 55 ){
+              window.open("humidity.html", "_blank");
+            }
+            if (parseInt(document.getElementById("tempDisplay").innerHTML) >= 35 ){
+              window.open("temp.html", "_blank");
+            }
+
+          }
+        </script>
     
-
-
-    </body>
+      </body>
     
     </div>
 
     <br><br><br><br>
 
+    
 
 
     <div class = "nhsWarning">
 
       <p id = "NHS"> If you require urgent assistance please check out 
         <a href = "https://www.nhs.uk/nhs-services/mental-health-services/get-urgent-help-for-mental-health/" style="color:white; font-weight: bold;">this website </a> 
-        or call one of these numbers. </br> </br>
+        or call one of these numbers. </br></br>
 
         <strong>0121 262 3555 </br>
         0800 915 9292 </br>
@@ -192,22 +207,6 @@
 
 
     </div>
-   
-
-    
-
-    <body onload="setInterval(hngng, 500);">
-      <p>haha</p>
-    </body>
-
-
-
-
-    <script>
-      
-        
-      
-    </script>
 
 
     <script>
